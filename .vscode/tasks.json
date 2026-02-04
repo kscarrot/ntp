@@ -1,0 +1,50 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "shell",
+      "command": "bun run dev",
+      "group": "build",
+      "problemMatcher": [],
+      "label": "Development",
+      "detail": "bun run dev",
+      "isBackground": true,
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "type": "shell",
+      "command": "bun run lint",
+      "group": "build",
+      "problemMatcher": ["$eslint-stylish"],
+      "label": "Lint",
+      "detail": "eslint ."
+    },
+    {
+      "type": "shell",
+      "command": "bun run lint:fix",
+      "group": "build",
+      "problemMatcher": ["$eslint-stylish"],
+      "label": "Lint: Fix",
+      "detail": "eslint . --fix"
+    },
+    {
+      "type": "shell",
+      "command": "bun run test",
+      "group": "build",
+      "problemMatcher": [],
+      "label": "Test",
+      "detail": "vitest (watch)",
+      "isBackground": true
+    },
+    {
+      "type": "shell",
+      "command": "bun run test:run",
+      "group": "build",
+      "problemMatcher": [],
+      "label": "Test: Run",
+      "detail": "vitest run"
+    }
+  ]
+}
